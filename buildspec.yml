@@ -6,11 +6,20 @@ phases:
       python: 3.9
     commands:
       - echo "Installing dependencies..."
+      - pip install --upgrade pip
       - pip install -r requirements.txt -t .
   build:
     commands:
-      - echo "Build completed"
+      - echo "Build phase completed."
 
 artifacts:
   files:
-    - '**/*'
+    - application.py
+    - requirements.txt
+    - templates/**/* 
+    - static/**/* 
+    - .ebextensions/**/* 
+    - src/**/* 
+    - model.pkl
+    - buildspec.yml
+  discard-paths: no
