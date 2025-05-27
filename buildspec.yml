@@ -10,16 +10,17 @@ phases:
       - pip install -r requirements.txt -t .
   build:
     commands:
-      - echo "Build phase completed."
+      - echo "Build completed."
 
 artifacts:
   files:
     - application.py
     - requirements.txt
-    - templates/**/* 
-    - static/**/* 
-    - .ebextensions/**/* 
-    - src/**/* 
-    - model.pkl
-    - buildspec.yml
+    - Procfile
+    - templates/home.html
+    - templates/index.html
+    - .ebextensions/python.config
+    - src/pipeline/predict_pipeline.py
+    - artifacts/model.pkl
+    - artifacts/preprocessor.pkl
   discard-paths: no
