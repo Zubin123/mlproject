@@ -19,7 +19,6 @@ artifacts:
     - Procfile
     - templates/home.html
     - templates/index.html
-    - .ebextensions/python.config
     - src/pipeline/predict_pipeline.py
     - artifacts/model.pkl
     - artifacts/preprocessor.pkl
